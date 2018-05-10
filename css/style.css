@@ -19,5 +19,5 @@ h2 {
 
 ol {
     color: darkblue;
-    list-style: outside;
+    font-weight: bold;
 }
