@@ -111,13 +111,19 @@ function questionSix(){
   var attempts = 4;
   var guess = parseInt(prompt('How old am I?', 'type a number'));
 
-  while (attempts > 1 && guess !== answer6) {
+  if (guess > answer6) {
     attempts--;
-    guess = parseInt(prompt('Incorrect, please guess again!  You have ' + attempts + ' attempts remaining.', 'type a number'));
+    guess = parseInt(prompt('Too old, please guess again!  You have ' + attempts + ' attempts remaining.', 'type a number'));
     console.log ('Guess: ' + guess + '; Attempts Remaining: ' + attempts + '; Cumulative Points: ' + points);
+    while (attempts > 1);
   }
-
-  if (attempts === 1 && guess !== answer6) {
+  if (guess < answer6) {
+    attempts--;
+    guess = parseInt(prompt('Too young, please guess again!  You have ' + attempts + ' attempts remaining.', 'type a number'));
+    console.log ('Guess: ' + guess + '; Attempts Remaining: ' + attempts + '; Cumulative Points: ' + points);
+    while (attempts > 1);
+  }
+  if (attempts === 0 && guess !== answer6) {
     alert('All out of attampts, dang! The answer was 33.');
   }
 
@@ -129,27 +135,27 @@ function questionSix(){
 }
 
 function questionSeven(){
-  var statesLived = ['oregon', 'california', 'idaho', 'north carolina'];
+  var statesLived = ['oregon', 'california', 'north carolina'];
 
-  var answer7 = prompt('Next, please guess a state I\'ve lived in other than Washington.  You have 6 tries to get one of them.', 'Please type the full state name.').toLowerCase;
+  var answer7 = prompt('Next, please guess a state I\'ve lived in other than Washington.  You have 6 tries to get one of them.', 'Please type the full state name.').toLowerCase();
 
   console.log('Answered: ' + answer7);
 
-  var tries = 0;
+  var tries = 6;
 
   for (var index = 0; index < statesLived.length; index++) {
-    if (answer7 === statesLived[0]){
+    if (answer7 === statesLived[index]){
       points++;
-      alert('That\'s correct!  All of the correct choices are ' + statesLived + '.  +1 point for you!');
+      alert('That\'s correct!  The other states are ' + statesLived[1] + ' and ' + statesLived[2]);
       break;
     }
     else {
-      tries++;
-      answer7 = prompt('No, that\' not one of them.  ' + user + ', you have ' + (6 - tries) + 'guesses remaining.');
+      tries--;
+      answer7 = prompt('No, that\' not one of them.  ' + user + ', you have ' + tries + ' guesses remaining.');
     }
   }
 
-  if (tries === 6) {
+  if (tries === 1) {
     alert('Sorry, out of guesses!');
   }
 }
