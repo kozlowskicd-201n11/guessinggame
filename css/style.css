@@ -1,7 +1,6 @@
 * {
     font-family: Tahoma, sans-serif;
     background-color: rgb(253, 214, 169);
-    background-blend-mode: hard-light;
 }
 
 h1 {
@@ -13,11 +12,32 @@ h1 {
 
 h2 {
     color: darkgreen;
-    text-align: center;
     text-decoration: dotted underline;
 }
 
-ol {
+h2 {
+    border: 3px solid darkslategrey;
+}
+
+#questions {
+    margin-right: 450px;
+}
+
+#experience {
+    text-align: left;
+    margin-left: 500px;
+}
+
+ol, ul {
     color: darkblue;
     font-weight: bold;
+    border: 3px solid darkslategrey;
+}
+
+ol {
+    margin-right: 450px;
+}
+
+ul {
+    margin-left: 500px;
 }
