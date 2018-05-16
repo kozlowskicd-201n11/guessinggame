@@ -140,7 +140,7 @@ function questionSeven() {
     }
     else {
       tries--;
-      answer7 = prompt('No, that\' not one of them.  ' + user + ', you have ' + (tries + 1) + ' guesses remaining.');
+      answer7 = prompt('No, that\'s not one of them.  ' + user + ', you have ' + (tries + 1) + ' guesses remaining.');
     }
   }
 

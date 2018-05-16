@@ -21,14 +21,15 @@
     margin-top: 5%;
 }
 
-
 .question {
     font-weight: bold;
     color: darkgreen;
 }
+
 .answer {
     font-weight: lighter;
 }
+
 #experience {
     margin-right: 10%;
     margin-top: 20px;
