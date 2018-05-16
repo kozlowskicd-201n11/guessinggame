@@ -4,20 +4,41 @@
     background-blend-mode: hard-light;
 }
 
-h1 {
+.heading {
     color: darkgreen;
-    text-align: center;
-    text-decoration: dotted underline overline;
-    text-shadow: 2px 2px 1px green;    
-}
-
-h2 {
-    color: darkgreen;
-    text-align: center;
-    text-decoration: dotted underline;
-}
-
-ol {
-    color: darkblue;
+    text-decoration: wavy;
     font-weight: bold;
+    text-shadow: 2px 2px 1px grey;
+    margin-top: 50px;
 }
+
+.subheading {
+    color: darkgreen;
+    text-decoration: underline;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 24px;
+    margin-top: 5%;
+}
+
+
+.question {
+    font-weight: bold;
+    color: darkgreen;
+}
+.answer {
+    font-weight: lighter;
+}
+#experience {
+    margin-right: 10%;
+    margin-top: 20px;
+    font-size: 18px;
+    width: 50%;
+}
+
+#me {
+    width: 500px;
+    float: right;
+    margin-right: 100px;
+}
+
